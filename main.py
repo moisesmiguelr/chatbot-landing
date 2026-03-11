@@ -8,7 +8,7 @@ CORS(app)
 
 # Render y otros servicios usan variables de entorno por seguridad
 # En Render configurarás GOOGLE_API_KEY en la sección 'Environment'
-api_key = os.environ.get("GOOGLE_API_KEY", "AIzaSyDuQiFcPbCKIjvmREfJ3SfwTliLWmOWb_I")
+genai.configure(api_key=os.environ.get("GOOGLE_API_KEY"))
 genai.configure(api_key=api_key)
 
 # Configuración del modelo
